@@ -1,0 +1,96 @@
+.map {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.img {
+  width: 100%;
+  height: 100%;
+}
+.panel {
+  height: 0px;
+  transition: 0.5s;
+
+  position: absolute;
+  left: calc(50% - 40px);
+  width: 75px;
+  background: #ff565e;
+  border-radius: 50px 50px 0px 0px;
+  bottom: 0;
+}
+.btn {
+  margin: 10% 0 0 11%;
+  outline: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: #20212a;
+  border: none;
+}
+.warn-page {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 0vh;
+  background: #222;
+  transition: 1s;
+  overflow: hidden;
+  color: white;
+}
+.btn-back {
+  background: #3b3b3b;
+  border: none;
+  border-radius: 10px;
+  margin: 2% 0 0 2%;
+  height: 30px;
+  width: 100px;
+  font-weight: bold;
+  color: white;
+}
+.file-label {
+  display: block;
+  background: #3b3b3b;
+  border-radius: 10px;
+  width: 90vw;
+  height: 20vh;
+  margin: 1rem auto 0 auto;
+}
+.file-span {
+  display: inline-block;
+  margin: 15% 0 0 36%;
+}
+.file {
+  display: none;
+}
+.text-label {
+  display: block;
+  width: 90vw;
+  height: 4vh;
+  margin: 0.5rem auto;
+}
+.p-address {
+  margin: 0 0 0.3rem 0.5rem;
+}
+.text-input {
+  outline: none;
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: #3b3b3b;
+  border: none;
+}
+.btn-send {
+  background: #3b3b3b;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  left: calc(50% - 50px);
+  bottom: 1rem;
+  height: 30px;
+  width: 100px;
+  font-weight: bold;
+  color: white;
+}
