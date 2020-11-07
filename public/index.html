@@ -8,5 +8,32 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=fa649e4f-86aa-4a72-8e01-b911409bc145&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script>
+      ymaps.ready(init);
+      function init() {
+        var myMap = new ymaps.Map("map", {
+          center: [55.76, 37.64],
+          zoom: 7,
+        });
+      }
+    </script>
+    <!-- <script>
+      let map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: -34.397, lng: 150.644 },
+          zoom: 8,
+        });
+      }
+    </script>
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCegam8kzBo4YRTIJkaW5U4BGjtuxHAoYA&callback=initMap"
+    ></script> -->
   </body>
 </html>
