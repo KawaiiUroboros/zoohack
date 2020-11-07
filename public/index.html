@@ -14,12 +14,35 @@
       type="text/javascript"
     ></script>
     <script>
+
       ymaps.ready(init);
       function init() {
-        var myMap = new ymaps.Map("map", {
+        let panel = document.querySelector('.panel');
+
+        let myMap = new ymaps.Map("map", {
           center: [55.76, 37.64],
-          zoom: 7,
+          zoom: 12,
         });
+
+        let mark;
+        myMap.events.add("click", function (e) {
+          console.log('myMap', myMap.geoObjects)
+
+          let myPlacemark = new ymaps.Placemark(
+            e.get("coords"), {}, {
+              preset: "islands#redDotIcon",
+            }
+          );
+
+          if(mark){
+            myMap.geoObjects.remove(mark);
+          }
+          myMap.geoObjects.add(myPlacemark);
+          mark = myPlacemark;
+
+          panel.style.height = "85px";
+        });
+
       }
     </script>
     <!-- <script>
