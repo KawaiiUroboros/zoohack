@@ -26,8 +26,6 @@
 
         let mark;
         myMap.events.add("click", function (e) {
-          console.log('myMap', myMap.geoObjects)
-
           let myPlacemark = new ymaps.Placemark(
             e.get("coords"), {}, {
               preset: "islands#redDotIcon",
@@ -36,11 +34,14 @@
 
           if(mark){
             myMap.geoObjects.remove(mark);
+            mark = null;
+            panel.style.height = "0px";
+          } else {
+            myMap.geoObjects.add(myPlacemark);
+            panel.style.height = "85px";
+            mark = myPlacemark;
           }
-          myMap.geoObjects.add(myPlacemark);
-          mark = myPlacemark;
 
-          panel.style.height = "85px";
         });
 
       }
