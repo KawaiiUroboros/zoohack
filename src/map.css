@@ -10,7 +10,7 @@
 .panel {
   height: 0px;
   transition: 0.5s;
-
+  overflow: hidden;
   position: absolute;
   left: calc(50% - 40px);
   width: 75px;
@@ -38,6 +38,7 @@
   color: white;
 }
 .btn-back {
+  outline: none;
   background: #3b3b3b;
   border: none;
   border-radius: 10px;
@@ -81,6 +82,13 @@
   margin: 0 auto;
   background: #3b3b3b;
   border: none;
+}
+.p-possibility{
+  margin: 3rem 40.5%;
+}
+.possibility{
+  display: block;
+  margin: 0 23%;
 }
 .btn-send {
   background: #3b3b3b;

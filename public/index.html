@@ -14,10 +14,10 @@
       type="text/javascript"
     ></script>
     <script>
-
+      let address;
       ymaps.ready(init);
       function init() {
-        let panel = document.querySelector('.panel');
+        let panel = document.querySelector(".panel");
 
         let myMap = new ymaps.Map("map", {
           center: [55.76, 37.64],
@@ -27,12 +27,24 @@
         let mark;
         myMap.events.add("click", function (e) {
           let myPlacemark = new ymaps.Placemark(
-            e.get("coords"), {}, {
+            e.get("coords"),
+            {},
+            {
               preset: "islands#redDotIcon",
             }
           );
 
-          if(mark){
+          // console.log("e", ymaps.geocode(e.get("coords")));
+          let geocoder = ymaps.geocode(e.get("coords"));
+          geocoder.then(function (res) {
+            address = res.geoObjects.get(0).properties.get("text");
+            // console.log('address', address)
+            window.address = address;
+            // console.log('address index \n', address);
+            // console.log('window address index \n', window.address);
+          });
+
+          if (mark) {
             myMap.geoObjects.remove(mark);
             panel.style.height = "0px";
             mark = null;
