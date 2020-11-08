@@ -7,6 +7,7 @@ import fire from "./assets/fire.svg";
 function WarnMap() {
   function appearWarnPage(e) {
     document.querySelector(".warn-page").style.height = "100vh";
+    document.querySelector(".text-input").value = window.address;
   }
   function disappearWarnPage(e) {
     document.querySelector(".warn-page").style.height = "0vh";
